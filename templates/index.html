@@ -1,1 +1,27 @@
-Hola Mundo !
+<!doctype html>
+<html lang="en">
+    <head></head>
+    <body>
+        <h1>Incendios en España del 2001 al 2011</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+              <th>Superficie Forestal Quemada</th>
+              <th>Muertos</th>
+              <th>Heridos</th>
+              <th>Comunidad</th>
+              <th>Causa</th>
+              <th>Perdidas</th>
+            </tr>
+    <!--    {% for obj in object_list %} -->
+            <tr>
+              <td>{{ obj['SUPQUEMADA'] }}</td>
+              <td>{{ obj['MUERTOS'] }}</td>
+              <td>{{ obj['HERIDOS'] }}</td>
+              <td>{{ obj['COMUNIDAD'].decode('UTF-8') }}</td>
+              <td>{{ obj['CAUSA'].decode('UTF-8')  }}</td>
+              <td>{{ obj['PERDIDAS'] }}</td>
+            </tr>
+   <!--     {% endfor %} -->
+        </table>
+    </body>
+</html>
